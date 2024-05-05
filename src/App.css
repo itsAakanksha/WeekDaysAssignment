@@ -52,8 +52,8 @@ a{
 }
 
 .details{
-  -webkit-mask-image:linear-gradient(#000000DE,rgba(0,0,0,0.3));
-  mask-image: linear-gradient(#000000DE,rgba(0,0,0,0.3));
+  -webkit-mask-image:linear-gradient(#000000DE,rgba(0,0,0,1));
+  mask-image: linear-gradient(#000000DE,rgba(0,0,0,0.4));
 }
 
 .view-jobs{
