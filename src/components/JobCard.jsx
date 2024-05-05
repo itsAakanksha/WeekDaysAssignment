@@ -10,29 +10,39 @@ import Button from "@mui/material/Button";
 import Image from "@mui/icons-material/Image";
 
 import BoltIcon from "@mui/icons-material/Bolt";
-function JobCard() {
+function JobCard({
+  companyName,
+  jobDetailsFromCompany,
+  jobRole,
+  location,
+  logoUrl,
+  minJdSalary,
+  jdLink,
+  maxJdSalary,
+  minExp,
+}) {
   return (
-    
     <Paper
       elevation={1}
       square={false}
-     
       style={{
         marginBottom: "20px",
         maxWidth: "360px",
         borderRadius: "20px",
-        
       }}
     >
-    <Card  style={{
-   
-      borderRadius: "20px",
-      
-    }}>
-      <CardContent style={{backgroundColor:' rgb(255,255,255)' }}>
-        <Box sx={{display:'flex', gap:1}}>
-       
-        <img src="	https://storage.googleapis.com/weekday-assets/airtableAttachment_1713846233282_m137p.jpg" style={{display:'block', width:'25px'}} alt="" />
+      <Card
+        style={{
+          borderRadius: "20px",
+        }}
+      >
+        <CardContent style={{ backgroundColor: " rgb(255,255,255)" }}>
+          <Box sx={{ display: "flex", gap: 1 }}>
+            <img
+              src={logoUrl}
+              style={{ display: "block", width: "25px" }}
+              alt=""
+            />
             <div class="info-container">
               <Box
                 component="h3"
@@ -44,68 +54,64 @@ function JobCard() {
                   letterSpacing: 1,
                 }}
               >
-                fampay
+                {companyName}
               </Box>
-              <h2 style={{ fontSize: 14, lineHeight: 1.5 }}>
-                Backend Engineer
-              </h2>
-           
-            <p class="cards-sub-text">Bangalore</p>
-          </div>
+              <h2 style={{ fontSize: 14, lineHeight: 1.5 }}>{jobRole}</h2>
+
+              <p class="cards-sub-text">{location}</p>
+            </div>
+          </Box>
+
+          <Typography
+            variant="body2"
+            component="p"
+            sx={{ my: 1, color: "#4D596A" }}
+          >
+            {minJdSalary && maxJdSalary && (
+              <span>
+                Estimated salary: Rs {minJdSalary} - {maxJdSalary} LPA ✅
+              </span>
+            )}
+
+            <br />
+          </Typography>
+
+          <Typography variant="body1">About Company:</Typography>
+          <p style={{ fontSize: 14 }}>
+            <strong>About us</strong>
+          </p>
+
+          <p className="details">
+            <span style={{ fontSize: 14 }}>{jobDetailsFromCompany}</span>
+          </p>
+
+          <Box
+            component="div"
+            sx={{ textAlign: "center", mb: 1 }}
+            className="view-jobs"
+          >
+            <a href={jdLink}>View job</a>
+          </Box>
+
+          <h3 className="experience">Minimum Experience</h3>
+          <h2 style={{ fontSize: 14, lineHeight: 1 }}>{minExp} years</h2>
+        </CardContent>
+        <Box className="status-container">
+          <Button
+            variant="contained"
+            startIcon={<BoltIcon color="warning" />}
+            style={{
+              backgroundColor: "#55EFC4",
+              padding: "8px 18px",
+              margin: "5px 0",
+              textTransform: "capitalize",
+            }}
+            color="inherit"
+            fullWidth
+          >
+            Easy Apply
+          </Button>
         </Box>
-
-        <Typography
-          variant="body2"
-          component="p"
-          sx={{ my: 1, color: "#4D596A" }}
-        >
-          Estimated salary: Rs18 - 35 LPA <span> ✅</span>
-          <br />
-        </Typography>
-        <Typography variant="body1">About Company:</Typography>
-        <p style={{ fontSize: 14 }}>
-          <strong>About us</strong>
-        </p>
-
-        <p className="details">
-          <span style={{ fontSize: 14 }}>
-            FamPay is building India’s first neo-bank exclusively teens. FamPay
-            helps teens make their own online and offline payments through UPI,
-            FamPay App and FamCard. Our aim is to make banking cool for teens
-            and to help them learn the value of money, savings and spending
-            wisely. We are on a mission to raise a new, financially aware
-            generation, and drive 250 Million+ Indian teenagers to kickstart
-            their financial journey super early in their life.
-          </span>
-        </p>
-
-        <Box
-          component="div"
-          sx={{ textAlign: "center", mb: 1 }}
-          className="view-jobs"
-        >
-          <a href="">View job</a>
-        </Box>
-
-        <h3 className="experience">Minimum Experience</h3>
-        <h2 style={{ fontSize: 14, lineHeight: 1 }}>3 years</h2>
-      </CardContent>
-      <Box className="status-container">
-        <Button
-          variant="contained"
-          startIcon={<BoltIcon color="warning" />}
-          style={{
-            backgroundColor: "#55EFC4",
-            padding: "8px 18px",
-            margin: "5px 0",
-            textTransform: 'capitalize'
-          }}
-          color="inherit"
-          fullWidth
-        >
-          Easy Apply
-        </Button>
-      </Box>
       </Card>
     </Paper>
   );

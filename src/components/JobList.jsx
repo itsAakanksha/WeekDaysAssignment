@@ -1,25 +1,23 @@
-import React from 'react'
-import JobCard from './JobCard'
-import   Grid from '@mui/material/Grid'
-import { Container } from '@mui/material'
-import Box from '@mui/material/Box'
+import React from 'react';
+import JobCard from './JobCard';
+import Grid from '@mui/material/Grid';
+import { Container } from '@mui/material';
+import Box from '@mui/material/Box';
+import { useSelector } from 'react-redux'; 
+
 function JobList() {
-
-    const jobs = [1,2,3]
+  const lists = useSelector((state) => state.job.jobData); 
   return (
-    
-   
-    <Grid container spacing={1} justifyContent="center"
-    alignItems="center">
-    {jobs.map(job => (
-      <Grid item xs={12} sm={6} md={4} key={job.id}>
-        <JobCard />
+    <Container>
+      <Grid container spacing={1} justifyContent="center" alignItems="center">
+        {lists.map((list, index) => (
+          <Grid item xs={12} sm={6} md={4} key={list.jdUid}>
+            <JobCard {...list} />
+          </Grid>
+        ))}
       </Grid>
-    ))}
-  </Grid>
-
- 
-  )
+    </Container>
+  );
 }
 
-export default JobList
+export default JobList;
