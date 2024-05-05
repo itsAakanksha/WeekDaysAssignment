@@ -7,7 +7,7 @@ import CheckBoxIcon from "@mui/icons-material/CheckBox";
 import Paper from "@mui/material/Paper";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
-import Image from "@mui/icons-material/Image";
+
 
 import BoltIcon from "@mui/icons-material/Bolt";
 function JobCard({
@@ -43,7 +43,7 @@ function JobCard({
               style={{ display: "block", width: "25px" }}
               alt=""
             />
-            <div class="info-container">
+            <div className="info-container">
               <Box
                 component="h3"
                 sx={{
@@ -58,7 +58,7 @@ function JobCard({
               </Box>
               <h2 style={{ fontSize: 14, lineHeight: 1.5 }}>{jobRole}</h2>
 
-              <p class="cards-sub-text">{location}</p>
+              <p className="cards-sub-text">{location}</p>
             </div>
           </Box>
 

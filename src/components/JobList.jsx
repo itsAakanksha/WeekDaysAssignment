@@ -10,8 +10,8 @@ function JobList() {
   return (
     <Container>
       <Grid container spacing={1} justifyContent="center" alignItems="center">
-        {lists.map((list, index) => (
-          <Grid item xs={12} sm={6} md={4} key={list.jdUid}>
+        {lists.map((list,index) => (
+          <Grid item xs={12} sm={6} md={4} key={index}>
             <JobCard {...list} />
           </Grid>
         ))}

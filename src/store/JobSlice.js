@@ -10,7 +10,7 @@ const jobSlice = createSlice({
     initialState,
     reducers:{
         setJobData:(state,action)=>{
-         state.jobData = action.payload
+           state.jobData = [...state.jobData, ...action.payload];
         }
     }
 })
