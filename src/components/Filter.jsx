@@ -34,7 +34,7 @@ export default function Filter() {
         selectedExperience: selectedExperience,
         selectedMode: selectedMode,
         selectedMinBasePay:selectedMinBasePay,
-        selectedTechStack:selectedTechStack
+        selectedMinBasePay:selectedMinBasePay
 
       })
     );
@@ -50,8 +50,7 @@ export default function Filter() {
     selectedExperience,
     selectedLocation,
     selectedMode,
-    selectedMinBasePay,
-    selectedTechStack
+    selectedMinBasePay
   ]);
 
   // To get unique data of each job field
@@ -145,19 +144,6 @@ export default function Filter() {
         renderInput={(params) => <TextField {...params} label="Min Base Salary" />}
         sx={{ minWidth: "150px", maxWidth: "400px", marginX: 1, marginY: 1 }}
       />
-
-      <Autocomplete
-      multiple
-      limitTags={2}
-      id="job-roles-filte"
-      options={jobRolesData}
-      value={selectedTechStack}
-      onChange={(event, value) => setSelectedTechStack(value)}
-      renderInput={(params) => <TextField {...params} label="Tech Stack" />}
-      sx={{ minWidth: "150px", maxWidth: "400px", marginX: 1, marginY: 1 }}
-    />
-
-      
       </Container>
     </>
   );

@@ -21,27 +21,13 @@ const jobSlice = createSlice({
         selectedExperience,
         selectedMode,
         selectedMinBasePay,
-        selectedTechStack,
       } = action.payload;
 
       // Apply filters based on selectedRoles
       let filteredData = state.jobData;
-
       if (selectedRoles.length > 0) {
         filteredData = filteredData.filter((item) =>
           selectedRoles.includes(item.jobRole)
-        );
-      }
-
-      // Remove "Tech Lead" from selectedTechStack
-      const filteredTechStack = filteredData.filter(
-        (stack) => stack !== "tech lead"
-      );
-
-      // Apply filter based on filteredTechStack
-      if (filteredTechStack.length > 0) {
-        filteredData = filteredData.filter((item) =>
-          filteredTechStack.includes(item.jobRole) && item!== "tech lead"
         );
       }
 
@@ -78,6 +64,18 @@ const jobSlice = createSlice({
         filteredData = filteredData.filter(
           (item) => item.minJdSalary >= minBasePayNumber
         );
+      }
+
+      if (selectedExperience.length > 0) {
+        filteredData = filteredData.filter(item => {
+          // Convert selected experience values to numbers
+          const minExp = parseInt(item.minExp);
+          console.log("d",item.minExp);
+          const selectedMinExp = parseInt(selectedExperience);
+      
+          // Filter items where minExp is greater than or equal to selectedMinExp
+          return minExp >= selectedMinExp;
+        });
       }
 
       // Update state with filtered data
