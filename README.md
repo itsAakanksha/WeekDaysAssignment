@@ -10,7 +10,7 @@
 
 ## Deployed Application
 
-You can access the deployed version of the Job Listing Application [Link]([https://your-deployed-url.com](https://week-days-assignment-80ozlacxu-aakankshas-projects-97350f10.vercel.app/)).
+You can access the deployed version of the Job Listing Application [here]([https://your-deployed-url.com](https://week-days-assignment-80ozlacxu-aakankshas-projects-97350f10.vercel.app/)).
 
 ## Additional Information
 
