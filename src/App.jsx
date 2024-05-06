@@ -4,6 +4,7 @@ import { ThemeProvider, createTheme } from "@mui/material/styles";
 import JobList from "./components/JobList";
 import { useDispatch } from "react-redux";
 import { setJobData } from "./store/JobSlice";
+import Filter from "./components/Filter.jsx";
 
 function App() {
   const [loading, setLoading] = useState(false);
@@ -82,7 +83,8 @@ function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <div className="cont">
+    <Filter/>
+    <div className="cont">
         <JobList  />
         {loading && <div>Loading...</div>}
       </div>
