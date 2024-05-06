@@ -13,9 +13,9 @@ function JobList() {
 
   return (
     <Container>
-      <Grid container spacing={1} justifyContent="center" alignItems="center">
+      <Grid container spacing={1} justifyContent="space-between" alignItems="center">
         {dataToDisplay.map((list,index) => (
-          <Grid item xs={12} sm={6} md={4} key={index}>
+          <Grid item  xs={12} sm={6} md={4} key={index}>
             <JobCard {...list} />
           </Grid>
         ))}

@@ -11,6 +11,8 @@ body, h1, h2, h3, h4, h5, h6, p,span {
  
 }
 
+
+
 .cont{
   display: flex;
   justify-content: center;
@@ -23,7 +25,7 @@ a{
   text-decoration: none;
   color: #4943DA;
  text-align: center;
- font-size: 14px;
+ font-size: 14px; 
 }
 
 .cards-sub-text {
@@ -59,4 +61,5 @@ a{
 .view-jobs{
   position: relative;
   top: -5px;
+ 
 }
