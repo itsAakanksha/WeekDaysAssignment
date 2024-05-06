@@ -9,8 +9,7 @@
 3: run the project using   `npm run dev`
 
 ## Deployed Application
-
-You can access the deployed version of the Job Listing Application [here]([https://your-deployed-url.com](https://week-days-assignment-80ozlacxu-aakankshas-projects-97350f10.vercel.app/)).
+Check out the live demo: [Job Listing App]([https://blog-app-j8z5.vercel.app/](https://your-deployed-url.com](https://week-days-assignment-80ozlacxu-aakankshas-projects-97350f10.vercel.app/))
 
 ## Additional Information
 
