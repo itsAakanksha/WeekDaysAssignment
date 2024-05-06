@@ -1,8 +1,18 @@
-# React + Vite
+# JOB LISTING APPLICATION
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Follow these 3 Steps to run the app Locally. 
 
-Currently, two official plugins are available:
+1: Clone the Project 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+2: run the command    `npm install`  - to install all the packages
+   
+3: run the project using   `npm run dev`
+
+
+## Additional Information
+
+- This project uses React for the frontend, Redux for state management, and Material-UI for UI components.
+- Multi-filtering: Users can apply multiple filters simultaneously to refine their job search results.
+- Clearing Filters: Users can easily clear all selected filters to view the complete list of job listings.
+- Infinite Scrolling: Job listings are loaded dynamically as the user scrolls down the page.
+- Performance Optimization: Optimize the app's performance for faster loading times.
