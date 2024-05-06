@@ -20,10 +20,6 @@ export default function Filter() {
   const [selectedMinBasePay, setSelectedMinBasePay] = useState([]);
   const [selectedTechStack, setSelectedTechStack] = useState([]);
 
-  
-
-  
-
   // Function to dispatch filter action with all selected values
   const applyFilters = () => {
     dispatch(
@@ -33,9 +29,8 @@ export default function Filter() {
         selectedLocation: selectedLocation,
         selectedExperience: selectedExperience,
         selectedMode: selectedMode,
-        selectedMinBasePay:selectedMinBasePay,
-        selectedMinBasePay:selectedMinBasePay
-
+        selectedMinBasePay: selectedMinBasePay,
+        selectedMinBasePay: selectedMinBasePay,
       })
     );
   };
@@ -50,7 +45,7 @@ export default function Filter() {
     selectedExperience,
     selectedLocation,
     selectedMode,
-    selectedMinBasePay
+    selectedMinBasePay,
   ]);
 
   // To get unique data of each job field
@@ -66,7 +61,7 @@ export default function Filter() {
   const locat = getUniqueData(data, "location");
   const minExperience = getUniqueData(data, "minExp");
   const mode = ["remote", "onsite"];
-  const minPay = ['0L','10L','20L','30L','40L']
+  const minPay = ["0L", "10L", "20L", "30L", "40L"];
 
   return (
     <>
@@ -135,15 +130,17 @@ export default function Filter() {
         />
 
         <Autocomplete
-        multiple
-        limitTags={2}
-        id="company-name-filter"
-        options={minPay}
-        value={selectedMinBasePay}
-        onChange={(event, value) => setSelectedMinBasePay(value)}
-        renderInput={(params) => <TextField {...params} label="Min Base Salary" />}
-        sx={{ minWidth: "150px", maxWidth: "400px", marginX: 1, marginY: 1 }}
-      />
+          multiple
+          limitTags={2}
+          id="company-name-filter"
+          options={minPay}
+          value={selectedMinBasePay}
+          onChange={(event, value) => setSelectedMinBasePay(value)}
+          renderInput={(params) => (
+            <TextField {...params} label="Min Base Salary" />
+          )}
+          sx={{ minWidth: "150px", maxWidth: "400px", marginX: 1, marginY: 1 }}
+        />
       </Container>
     </>
   );

@@ -67,12 +67,12 @@ const jobSlice = createSlice({
       }
 
       if (selectedExperience.length > 0) {
-        filteredData = filteredData.filter(item => {
+        filteredData = filteredData.filter((item) => {
           // Convert selected experience values to numbers
           const minExp = parseInt(item.minExp);
-          console.log("d",item.minExp);
+          console.log("d", item.minExp);
           const selectedMinExp = parseInt(selectedExperience);
-      
+
           // Filter items where minExp is greater than or equal to selectedMinExp
           return minExp >= selectedMinExp;
         });
