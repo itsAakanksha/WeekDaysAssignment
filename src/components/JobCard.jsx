@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react";
 import "../App.css";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
@@ -20,6 +21,8 @@ function JobCard({
   maxJdSalary,
   minExp,
 }) {
+
+  const [showAllDetails, setShowAllDetails] = useState(false);
   return (
     <Paper
       className="jobCardd"
@@ -84,21 +87,28 @@ function JobCard({
               <p style={{ fontSize: 14 }}>
                 <strong>About us</strong>
               </p>
-              <p className="details">
-                <span style={{ fontSize: 14 }}>
-                  {jobDetailsFromCompany.substring(0, 400)}
-                </span>
+              <p>
+              <span style={{ fontSize: 14 }}>
+              {showAllDetails
+                ? jobDetailsFromCompany // If showAllDetails is true, display all jobDetailsFromCompany
+                : jobDetailsFromCompany.substring(0, 400)} {/* Otherwise, display only the first 400 characters */}
+            </span>
+            {!showAllDetails && (
+              <span className="details" style={{ fontSize: 14 }}>
+                {jobDetailsFromCompany.substring(400, 500)}
+              </span>
+            )}
               </p>
             </>
           )}
 
-          {jdLink && (
+          { !showAllDetails && (
             <Box
               component="div"
               sx={{ textAlign: "center", mb: 1 }}
               className="view-jobs"
             >
-              <a href={jdLink}>View job</a>
+              <a onClick={() => setShowAllDetails(!showAllDetails)}>View job</a>
             </Box>
           )}
 

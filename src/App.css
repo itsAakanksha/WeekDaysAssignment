@@ -19,7 +19,8 @@ span {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* padding: 50px; */
+  padding: 20px 0;
+
 }
 
 
@@ -56,8 +57,10 @@ a {
 }
 
 .details {
+ 
+  
   -webkit-mask-image: linear-gradient(#000000de, rgba(0, 0, 0, 1));
-  mask-image: linear-gradient(#000000de, rgba(0, 0, 0, 0.4));
+  mask-image: linear-gradient(#000000de, rgba(0, 0, 0, 0.3));
 }
 
 .view-jobs {
