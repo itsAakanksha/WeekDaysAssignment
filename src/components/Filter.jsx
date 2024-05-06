@@ -65,7 +65,7 @@ export default function Filter() {
 
   return (
     <>
-      <Container sx={{ paddingTop: 2, display: "flex", flexWrap: "wrap" }}>
+      <Container  sx={{ paddingTop: 2, display: "flex", flexWrap: "wrap" }}>
         {/* Job Roles Filter */}
         <Autocomplete
           multiple
@@ -75,7 +75,8 @@ export default function Filter() {
           value={selectedRoles}
           onChange={(event, value) => setSelectedRoles(value)}
           renderInput={(params) => <TextField {...params} label="Roles" />}
-          sx={{ minWidth: "150px", maxWidth: "400px", marginX: 1, marginY: 1 }}
+          sx={{ minWidth: "150px", maxWidth: "400px", marginX: 1, marginY: 1 ,  }}
+          size="small"
         />
 
         {/* Company Name Filter */}
@@ -88,9 +89,11 @@ export default function Filter() {
           value={selectedCompanyName}
           onChange={(event, value) => setSelectedCompanyName(value)}
           renderInput={(params) => (
-            <TextField {...params} label="Search Company Name" />
+            <TextField {...params} label="Company Name" />
           )}
           sx={{ minWidth: "150px", maxWidth: "400px", marginX: 1, marginY: 1 }}
+          size="small"
+          
         />
 
         <Autocomplete
@@ -103,6 +106,7 @@ export default function Filter() {
           onChange={(event, value) => setSelectedLocation(value)}
           renderInput={(params) => <TextField {...params} label="Location" />}
           sx={{ minWidth: "150px", maxWidth: "400px", marginX: 1, marginY: 1 }}
+          size="small"
         />
 
         <Autocomplete
@@ -116,6 +120,7 @@ export default function Filter() {
             <TextField {...params} label="Min Experience" />
           )}
           sx={{ minWidth: "150px", maxWidth: "400px", marginX: 1, marginY: 1 }}
+          size="small"
         />
 
         <Autocomplete
@@ -127,6 +132,7 @@ export default function Filter() {
           onChange={(event, value) => setSelectedMode(value)}
           renderInput={(params) => <TextField {...params} label="Remote" />}
           sx={{ minWidth: "150px", maxWidth: "400px", marginX: 1, marginY: 1 }}
+          size="small"
         />
 
         <Autocomplete
@@ -140,6 +146,7 @@ export default function Filter() {
             <TextField {...params} label="Min Base Salary" />
           )}
           sx={{ minWidth: "150px", maxWidth: "400px", marginX: 1, marginY: 1 }}
+          size="small"
         />
       </Container>
     </>
