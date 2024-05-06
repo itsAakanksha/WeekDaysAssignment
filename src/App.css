@@ -19,8 +19,9 @@ span {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 50px;
+  /* padding: 50px; */
 }
+
 
 a {
   cursor: pointer;
